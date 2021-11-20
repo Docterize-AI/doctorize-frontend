@@ -7,7 +7,7 @@ import { BsUpload } from 'react-icons/bs';
 export default function Doctorize() {
 
     const router = useRouter();
-    const routeToDoctorize = () => {
+    const routeToResults = () => {
       router.push('/results');
     }
 
