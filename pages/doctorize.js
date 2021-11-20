@@ -7,9 +7,8 @@ export default function Doctorize() {
                 <form>
                     <input type="file" id="file" name="file" />
                     <select id="fileType" name="fileType">
-                        <option value="mp4">MP4</option>
-                        <option value="jpg">JPG</option>
-                        <option value="png">PNG</option>
+                        <option>Image</option>
+                        <option>Audio</option>
                     </select>
                     <input type="submit" value="Doctorize file" />
                 </form>
