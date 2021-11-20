@@ -1,13 +1,16 @@
 import styles from '../../styles/Home.module.css';
+import Image from 'next/image'
+import logo from './images/image.jpeg';
 
 export const Header = () => {
     return (
         <div className={styles['header-container']}>
+            <Image src={logo} alt="logo goes here" width={100} height={95}/>
             <h1>Doctorize</h1>
-            <div className={styles['buttons-container']}>
-            <button className={styles.button}>Login</button>
-            <button className={styles.button}>Request a Doctor</button>
-            <button className={styles.button}>About Us</button>
+            <div className={`${styles['buttons-container']}`}>
+            <button className={`${styles.button} ${styles.yellow}`}>Request a Doctor</button>
+            <button className={`${styles.button} ${styles.yellow}`}>About Us</button>
+            <button className={`${styles.button} ${styles.red}`}>Login</button>
             </div>
         </div>
     );
