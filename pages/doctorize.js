@@ -9,20 +9,35 @@ import docStyles from '../styles/Doctorize.module.css';
 export default function Doctorize() {
 
     const router = useRouter();
-    const routeToResults = () => {
-      router.push('/results');
-    }
 
     const [file, setFile] = useState(null);
     const [fileType, setFileType] = useState(null);
 
+    const headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        // 'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': '*'
+    }
     const doctorize = async (e) => {
         e.preventDefault();
         const data = new FormData();
         data.append('file', file);
-        const response = await axios.post('http://localhost:5000/upload', data);
-        console.log(response.data);
-        console.log(file, fileType);
+        const response = await axios.post('http://localhost:5000/upload', data, {
+            headers: headers
+        }).catch(
+            console.log("doctorize btn err")
+        )
+
+        console.log(response);
+
+        router.push({ 
+            pathname: '/results', 
+            query: { result: response.data } 
+        })
+
+        // console.log(file, fileType);
     }
 
     const onChangeHandler = (e) => {
@@ -51,18 +66,17 @@ export default function Doctorize() {
             </div>
 
             <div>
-                <form>
+                <form encType="multipart/form-data">
                     <input className={docStyles['upload-button']} type="file" id="file" name="file" onChange={onChangeHandler}/>
                     <BsUpload />
                     <select id="fileType" name="fileType" onChange={fileTypeChange}>
                         <option value='image'>Image</option>
                         <option value='audio'>Audio</option>
                     </select>
-                    <input type="submit" value="Upload" onChange={doctorize}/>
                 </form>
             </div>
 
-            <button className={docStyles.doctorize} onClick={routeToResults}>Doctorize</button>
+            <button className={docStyles.doctorize} onClick={doctorize}>Doctorize</button>
         </div>
     );
 }
