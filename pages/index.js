@@ -29,7 +29,7 @@ export default function Home() {
 
       {/* Body */}
       <div className={styles['login-container']}>
-        <h1>Login</h1>
+        <h1>Log In</h1>
         <form>
           <div className={styles['input-container']}>
             <input className={styles.input} type="text" value={username} name="username" placeholder="Email" onChange={e => setUsername(e.target.value)} />

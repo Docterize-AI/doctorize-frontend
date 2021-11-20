@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import { BsUpload } from 'react-icons/bs';
 import { Header } from './components/header';
+import docStyles from '../styles/Doctorize.module.css';
 
 export default function Doctorize() {
 
@@ -44,14 +45,14 @@ export default function Doctorize() {
             </div>
 
             {/* Body */}
-            <div>
-                <h2>We are here to assist you</h2>
+            <div className={docStyles.content}>
+                <h1>We are here to assist you</h1>
                 <p>Worried about your rash? Worried you have a disease? Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
             </div>
 
             <div>
                 <form>
-                    <input type="file" id="file" name="file" onChange={onChangeHandler}/>
+                    <input className={docStyles['upload-button']} type="file" id="file" name="file" onChange={onChangeHandler}/>
                     <BsUpload />
                     <select id="fileType" name="fileType" onChange={fileTypeChange}>
                         <option value='image'>Image</option>
@@ -61,7 +62,7 @@ export default function Doctorize() {
                 </form>
             </div>
 
-            <button className={styles.button} onClick={routeToResults}>Doctorize</button>
+            <button className={docStyles.doctorize} onClick={routeToResults}>Doctorize</button>
         </div>
     );
 }
