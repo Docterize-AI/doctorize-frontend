@@ -19,3 +19,9 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.main {
+    background-image: linear-gradient(#FCE38A, #FFFFFF);
+    height: 100vh;
+    width: 100%;
+}

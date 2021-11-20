@@ -38,7 +38,7 @@ export default function Doctorize() {
     }
 
     return(
-        <div>
+        <div className={docStyles.main}>
             {/* Nav */}
             <div>
                 <Header />
