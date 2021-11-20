@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { Header } from './components/header';
 
 export default function Home() {
 
@@ -23,7 +24,7 @@ export default function Home() {
 
       {/* Nav */}
       <div>
-        <h1>Doctorize</h1>
+        <Header />
       </div>
 
       {/* Body */}

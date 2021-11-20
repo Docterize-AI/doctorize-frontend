@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import { BsUpload } from 'react-icons/bs';
+import { Header } from './components/header';
 
 export default function Doctorize() {
 
@@ -39,7 +40,7 @@ export default function Doctorize() {
         <div>
             {/* Nav */}
             <div>
-                <h1>Doctorize</h1>
+                <Header />
             </div>
 
             {/* Body */}
