@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
+import { BsUpload } from 'react-icons/bs';
 
 export default function Doctorize() {
 
@@ -48,14 +49,14 @@ export default function Doctorize() {
             </div>
 
             <div>
-                <h3>Upload file</h3>
                 <form>
                     <input type="file" id="file" name="file" onChange={onChangeHandler}/>
+                    <BsUpload />
                     <select id="fileType" name="fileType" onChange={fileTypeChange}>
                         <option value='image'>Image</option>
                         <option value='audio'>Audio</option>
                     </select>
-                    <input type="submit" value="Doctorize file" onChange={doctorize}/>
+                    <input type="submit" value="Upload" onChange={doctorize}/>
                 </form>
             </div>
 
