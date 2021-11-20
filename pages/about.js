@@ -1,7 +1,9 @@
+import { Header } from './components/header';
+
 export default function About() {
     return (
         <div>
-            <h1>Doctorize</h1>
+            <Header />
             <h1>About Us</h1>
         </div>
     );
