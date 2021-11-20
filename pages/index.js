@@ -28,14 +28,15 @@ export default function Home() {
       </div>
 
       {/* Body */}
-      <div>
+      <div className={styles['login-container']}>
         <h1>Login</h1>
         <form>
-          <input type="text" value={username} name="username" placeholder="Username" onChange={e => setUsername(username)} />
-          <input type="password" value={password} name="password" placeholder="Password" onChange={e => setPassword(password)} />
-          <button type="button" onClick={routeToDoctorize}>Login</button>
+          <div className={styles['input-container']}>
+            <input className={styles.input} type="text" value={username} name="username" placeholder="Email" onChange={e => setUsername(e.target.value)} />
+            <input className={styles.input} type="password" value={password} name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+            <button className={`${styles.button} ${styles.red}`} type="button" onClick={routeToDoctorize}>Log In</button>
+          </div>
         </form>
-        <button className={styles.button} onClick={routeToDoctorize}>Doctorize</button>
       </div>
     </div>
   )
