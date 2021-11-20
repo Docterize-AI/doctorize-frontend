@@ -8,7 +8,7 @@ export default function Doctorize() {
 
     const router = useRouter();
     const routeToDoctorize = () => {
-      router.push('/doctorize');
+      router.push('/results');
     }
 
     const [file, setFile] = useState(null);
@@ -60,7 +60,7 @@ export default function Doctorize() {
                 </form>
             </div>
 
-            <button className={styles.button} onClick={routeToDoctorize}>Doctorize</button>
+            <button className={styles.button} onClick={routeToResults}>Doctorize</button>
         </div>
     );
 }

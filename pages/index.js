@@ -2,8 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
+  const routeToDoctorize = () => {
+    router.push('/doctorize');
+  }
 
   return (
     <div className={styles.container}>
@@ -20,8 +28,12 @@ export default function Home() {
 
       {/* Body */}
       <div>
-        <h2>We are here to assist you</h2>
-        <p>Worried about your rash? Worried you have a disease? Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
+        <h1>Login</h1>
+        <form>
+          <input type="text" value={username} name="username" placeholder="Username" onChange={e => setUsername(username)} />
+          <input type="password" value={password} name="password" placeholder="Password" onChange={e => setPassword(password)} />
+          <button type="button" onClick={routeToDoctorize}>Login</button>
+        </form>
         <button className={styles.button} onClick={routeToDoctorize}>Doctorize</button>
       </div>
     </div>
