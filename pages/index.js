@@ -4,9 +4,8 @@ import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router';
 
 export default function Home() {
-
+  const router = useRouter();
   const routeToDoctorize = () => {
-    const router = useRouter();
     router.push('/doctorize');
   }
 
