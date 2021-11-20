@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
 import logo from './images/image.jpeg';
+import { useRouter } from 'next/router';
 
 export const Header = () => {
     return (
@@ -8,7 +9,7 @@ export const Header = () => {
             <Image src={logo} alt="logo goes here" width={100} height={95}/>
             <h1>Doctorize</h1>
             <div className={`${styles['buttons-container']}`}>
-            <button className={`${styles.button} ${styles.yellow}`}>Request a Doctor</button>
+            <button className={`${styles.button} ${styles.yellow}`} onClick={() => }>Request a Doctor</button>
             <button className={`${styles.button} ${styles.yellow}`}>About Us</button>
             <button className={`${styles.button} ${styles.red}`}>Login</button>
             </div>

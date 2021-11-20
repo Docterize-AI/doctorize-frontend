@@ -124,6 +124,10 @@
   margin-right: 10px;
 }
 
+.button:hover {
+  background-color: #45a049;
+}
+
 .header-container {
   display: flex;
   align-items: center;
