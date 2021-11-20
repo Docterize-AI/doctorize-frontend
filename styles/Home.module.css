@@ -121,4 +121,20 @@
   border: none;
   cursor: pointer;
   border-radius: 20px;
+  margin-right: 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: turquoise;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: right;
+  width: 100%;
 }
