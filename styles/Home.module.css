@@ -131,6 +131,7 @@
   background-color: #95E1D3;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 1px 1px 2px #000000;
 }
 
 .buttons-container {
@@ -143,6 +144,14 @@
   background-color: #FCE38A;
 }
 
+.yellow:hover {
+  background-color: #FCCE3A;
+}
+
 .red {
   background-color: #F38181;
+}
+
+.red:hover {
+  background-color: #F36D6D;
 }
