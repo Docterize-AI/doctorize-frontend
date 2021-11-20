@@ -4,10 +4,6 @@ import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router';
 
 export default function Home() {
-  const router = useRouter();
-  const routeToDoctorize = () => {
-    router.push('/doctorize');
-  }
 
   return (
     <div className={styles.container}>
@@ -17,8 +13,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Nav */}
       <div>
-        <h1>Welcome to Doctorize.AI</h1>
+        <h1>Doctorize</h1>
+      </div>
+
+      {/* Body */}
+      <div>
+        <h2>We are here to assist you</h2>
+        <p>Worried about your rash? Worried you have a disease? Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
         <button className={styles.button} onClick={routeToDoctorize}>Doctorize</button>
       </div>
     </div>

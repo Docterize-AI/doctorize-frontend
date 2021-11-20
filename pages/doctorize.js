@@ -1,7 +1,14 @@
 import axios from 'axios';
 import { useState } from 'react';
+import styles from '../styles/Home.module.css';
+import { useRouter } from 'next/router';
 
 export default function Doctorize() {
+
+    const router = useRouter();
+    const routeToDoctorize = () => {
+      router.push('/doctorize');
+    }
 
     const [file, setFile] = useState(null);
     const [fileType, setFileType] = useState(null);
@@ -29,7 +36,17 @@ export default function Doctorize() {
 
     return(
         <div>
-            <h1>Doctorize</h1>
+            {/* Nav */}
+            <div>
+                <h1>Doctorize</h1>
+            </div>
+
+            {/* Body */}
+            <div>
+                <h2>We are here to assist you</h2>
+                <p>Worried about your rash? Worried you have a disease? Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
+            </div>
+
             <div>
                 <h3>Upload file</h3>
                 <form>
@@ -41,6 +58,8 @@ export default function Doctorize() {
                     <input type="submit" value="Doctorize file" onChange={doctorize}/>
                 </form>
             </div>
+
+            <button className={styles.button} onClick={routeToDoctorize}>Doctorize</button>
         </div>
     );
 }
