@@ -1,4 +1,12 @@
+import axios from 'axios';
+
 export default function Doctorize() {
+
+    const doctorize = async () => {
+        const response = await axios.get('http://localhost:5000/doctorize');
+        console.log(response.data);
+    }
+
     return(
         <div>
             <h1>Doctorize</h1>
