@@ -61,14 +61,18 @@ export default function Doctorize() {
 
             {/* Body */}
             <div className={docStyles.content}>
-                <h1>We are here to assist you</h1>
-                <p>Worried about your rash? Worried you have a disease? Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
+                <h1 className={docStyles.h1}>We are here to assist you</h1>
+                <p className={docStyles.p}>Worried about your rash? Worried you have a disease?</p>
+                <p className={docStyles.p}>Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
             </div>
 
             <div>
                 <form encType="multipart/form-data">
-                    <input className={docStyles['upload-button']} type="file" id="file" name="file" onChange={onChangeHandler}/>
-                    <BsUpload />
+                <label htmlFor="file" className={docStyles['upload-button']}>
+                <input className={docStyles.hideButton} id="file" type="file" name="file" onChange={onChangeHandler}/>
+                    <BsUpload /> Upload File
+                </label>
+                    <span className={docStyles.span}>{file ? file.name : ''}</span>
                     <select id="fileType" name="fileType" onChange={fileTypeChange}>
                         <option value='image'>Image</option>
                         <option value='audio'>Audio</option>
