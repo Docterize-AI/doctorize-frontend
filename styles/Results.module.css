@@ -1,0 +1,56 @@
+.container {
+    margin: 100px;
+    margin-bottom: 35px;
+    /* text-align: center; */
+}
+/* 
+.hero {
+    margin: 150px 0;
+} */
+
+.h1 {
+    font-size: 2em;
+    line-height: 0.1em;
+}
+
+.span {
+    font-weight: 300;
+}
+
+.resultBox {
+    margin-top: 80px;
+}
+
+.result {
+    font-size: 3em;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.spanBold {
+    font-weight: 700;
+}
+
+.pBox {
+    margin-top: 30px;
+}
+
+.p {
+    font-size: 1.3em;
+    line-height: 0.7em;
+    color: #1c1c1c;
+    font-style: italic;
+}
+
+.button {
+    cursor: pointer;
+    margin-left: 100px;
+    border-radius: 0.3rem;
+    background-color: #95e1d3;
+    padding: 0.7em 1em;
+    /* margin-top: 20px; */
+    color: black;
+    font-size: 1em;
+    font-weight: regular;
+}
+

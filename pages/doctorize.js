@@ -12,6 +12,7 @@ export default function Doctorize() {
 
     const [file, setFile] = useState(null);
     const [fileType, setFileType] = useState(null);
+    const [imgType, setImgType] = useState('skin');
 
     const headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -24,6 +25,8 @@ export default function Doctorize() {
         e.preventDefault();
         const data = new FormData();
         data.append('file', file);
+        data.append('imgType', imgType);
+        data.append('fileType', fileType);
         const response = await axios.post('http://localhost:5000/upload', data, {
             headers: headers
         }).catch(
@@ -34,7 +37,10 @@ export default function Doctorize() {
 
         router.push({ 
             pathname: '/results', 
-            query: { result: response.data } 
+            query: { 
+                result: response.data,
+                img: data
+            } 
         })
 
         // console.log(file, fileType);
@@ -52,6 +58,12 @@ export default function Doctorize() {
         setFileType(e.target.value);
     }
 
+    const imgTypeChange = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+        setImgType(e.target.value);
+    }
+
     return(
         <div className={docStyles.main}>
             {/* Nav */}
@@ -61,11 +73,11 @@ export default function Doctorize() {
 
             {/* Body */}
             <div className={docStyles.content}>
-                <h1 className={docStyles.h1}>We are here to assist you</h1>
+                <h1 className={docStyles.h1}>Want to check your health concerns?</h1>
                 <p className={docStyles.p}>Worried about your rash? Worried you have a disease?</p>
                 <p className={docStyles.p}>Take a quick picture, and we will let you know if you need to seek immediate medical attention.</p>
             </div>
-
+            <div className={docStyles.emptyDiv}></div>
             <div>
                 <form encType="multipart/form-data">
                 <label htmlFor="file" className={docStyles['upload-button']}>
@@ -77,6 +89,15 @@ export default function Doctorize() {
                         <option value='image'>Image</option>
                         <option value='audio'>Audio</option>
                     </select>
+
+                    {fileType == 'image' && 
+                        <select id="imgType" name="imgType" onChange={imgTypeChange}>
+                            <option value='skin'>Skin</option>
+                            <option value='brain'>Brain MRI</option>
+                            <option value='xray'>X-Ray</option>
+                        </select>
+                    }
+                    
                 </form>
             </div>
 

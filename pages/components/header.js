@@ -1,6 +1,8 @@
 import styles from '../../styles/Home.module.css';
 import Image from 'next/image'
-import logo from './images/image.jpeg';
+// import logo from './images/image.jpeg';
+import logo from './images/Doctorize-logo.png';
+
 import { useRouter } from 'next/router';
 
 export const Header = () => {
@@ -18,21 +20,25 @@ export const Header = () => {
         router.push('/');
     }
 
+    const routeToDoctorize = () => {
+        router.push('/doctorize');
+      }
+
     return (
         <div className={styles['header-container']}>
             <Image
                 className={`${styles.headerTitle}`}
-                onClick={routeToLogin}
+                onClick={routeToDoctorize}
                 src={logo}
                 alt="doctorize logo"
-                width={100}
-                height={95}
+                width={477.11111}
+                height={119.55555}
             />
-            <h1 
+            {/* <h1 
                 className={`${styles.headerTitle}`}
                 onClick={routeToLogin}>
-                    Doctorize
-            </h1>
+                    Doctorize.ai
+            </h1> */}
             <div className={`${styles['buttons-container']}`}>
             <button className={`${styles.button} ${styles.yellow}`} onClick={routeToRequestDoctor}>Request a Doctor</button>
             <button className={`${styles.button} ${styles.yellow}`} onClick={routeToAbout}>About Us</button>
