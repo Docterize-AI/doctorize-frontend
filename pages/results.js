@@ -5,6 +5,7 @@ export default function Results() {
   const router = useRouter();
   return (
     <div>
+        <Header />
         <h1>Results</h1>
         <p>{router.query.result}</p>
     </div>

@@ -28,8 +28,13 @@ export default function RequestDoctor() {
                 {
                     lst.map(item => {
                         return (
-                            <div>
-                                <button className={homeStyles.button} onClick={() => window.open("https://mcithedoctorsoffice.ca/locations/scarborough/")}>{item}</button>
+                            <div key={item}>
+                                <button 
+                                    className={homeStyles.button} 
+                                    onClick={() => 
+                                        window.open("https://mcithedoctorsoffice.ca/locations/scarborough/")
+                                    }>{item}
+                                </button>
                             </div>
                         );
                     })
