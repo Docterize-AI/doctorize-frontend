@@ -45,14 +45,14 @@
 .h1 {
     /* font-family: 'Oxygen'; */
     font-size: 3.5em;
-    line-height: 0.5em;
+    line-height: 0.8;
     margin-top: 1.5em;
     color: #2b1f1f;
 }
 
 .p {
     font-size: 1.3em;
-    line-height: 0.5em;
+    line-height: 0.7;
     color: #1c1c1c;
 }
 

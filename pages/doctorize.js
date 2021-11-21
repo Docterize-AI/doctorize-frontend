@@ -11,7 +11,7 @@ export default function Doctorize() {
     const router = useRouter();
 
     const [file, setFile] = useState(null);
-    const [fileType, setFileType] = useState(null);
+    const [fileType, setFileType] = useState('image');
     const [imgType, setImgType] = useState('skin');
 
     const headers = {
