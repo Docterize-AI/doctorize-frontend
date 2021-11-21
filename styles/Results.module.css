@@ -54,3 +54,18 @@
     font-weight: regular;
 }
 
+.button2 {
+    cursor: pointer;
+    margin-left: 100px;
+    border-radius: 0.3rem;
+    background-color: #95e1d3;
+    padding: 0.7em 1em;
+    /* margin-top: 20px; */
+    color: black;
+    font-size: 1em;
+    font-weight: regular;
+    margin: 50px auto;
+    /* margin-top: 50px; */
+    
+}
+

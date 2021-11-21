@@ -40,7 +40,7 @@ export const Specialists = (props) => {
                         </div>
                 </div>
             }) } */}
-                <div className="col-3">
+                <div className="col-4">
                         <div className={styles.imgBox}>
                         <Image
                             className={`${styles.img}`}
@@ -56,7 +56,7 @@ export const Specialists = (props) => {
                         </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-4">
                         <div className={styles.imgBox}>
                         <Image
                             className={`${styles.img}`}
@@ -72,7 +72,7 @@ export const Specialists = (props) => {
                         </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-4">
                         <div className={styles.imgBox}>
                         <Image
                             className={`${styles.img}`}

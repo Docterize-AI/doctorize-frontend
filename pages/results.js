@@ -76,13 +76,18 @@ export default function Results() {
           </button>
         } 
         {specialists && 
-          <div className="container" style={{marginTop: "100px"}}>
+          <div className="container" style={{marginTop: "80px", textAlign: "center"}}>
             {/* <div className="row"> */}
             {/* {doctors.map(doc => {
               <Specialists name={doc.name} hospital={doc.hospital}/>
               })
             } */}
             <Specialists />
+            <button 
+              className={styles.button2}
+            >
+              Search more specialists
+            </button>
             {/* </div> */}
           </div>
         }
